@@ -123,11 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &421483865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c7b3af6ce2e449f4094825154d827b51, type: 3}
+  m_PrefabInstance: {fileID: 824702141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &421483866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c7b3af6ce2e449f4094825154d827b51, type: 3}
   m_PrefabInstance: {fileID: 824702141}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &421483867
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421483865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6402836280a3c0b47ade2e97ae5ed085, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &424116501
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +525,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c7b3af6ce2e449f4094825154d827b51, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 421483867}
   m_SourcePrefab: {fileID: 100100000, guid: c7b3af6ce2e449f4094825154d827b51, type: 3}
 --- !u!1 &925994877
 GameObject:
