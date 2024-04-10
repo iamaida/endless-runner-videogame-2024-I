@@ -5,7 +5,7 @@ using UnityEngine;
 public class GenerateLevel : MonoBehaviour
 {
     public GameObject[] section;
-    public int zPos = 10;
+    public int zPos = 20;
     public bool creatingSection = false;
     public int secNum;
     // Start is called before the first 
@@ -24,7 +24,7 @@ public class GenerateLevel : MonoBehaviour
     {
         secNum = Random.Range(0, 3);
         Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
-        zPos += 10;
+        zPos += 20;
         yield return new WaitForSeconds(2);
         creatingSection = false;
     }
