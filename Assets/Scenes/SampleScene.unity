@@ -10419,6 +10419,7 @@ GameObject:
   - component: {fileID: 1963332181}
   - component: {fileID: 1963332183}
   - component: {fileID: 1963332184}
+  - component: {fileID: 1963332185}
   m_Layer: 0
   m_Name: LevelControl
   m_TagString: Untagged
@@ -10488,6 +10489,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sapphireCountDisplay: {fileID: 7169457}
+--- !u!114 &1963332185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963332180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fb8b2a575fc7342a063cb3bff9548b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disDisplay: {fileID: 1642824258}
+  disRun: 0
+  addingDis: 0
+  disDelay: 0.5
 --- !u!4 &1971085598 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b58e7fdfb89fbc549b36a69243aee4c0, type: 3}
