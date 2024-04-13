@@ -5,25 +5,36 @@ using UnityEngine.UI;
 public class LevelDistance : MonoBehaviour
 {
     public GameObject disDisplay;
+
+
     public int disRun;
     public bool addingDis = false;
+    public static bool canAdding = true;
     public float disDelay = 0.50f;
 
     // Update is called once per frame
     void Update()
     {
-        if (!addingDis)
+        if (canAdding)
         {
-            addingDis = true;
-            StartCoroutine(AddingDis());
+            if (!addingDis)
+            {
+                addingDis = true;
+                StartCoroutine(AddingDis());
+            }
+
         }
+
+
     }
 
     IEnumerator AddingDis()
     {
+
         disRun += 1;
         disDisplay.GetComponent<Text>().text = "" + disRun;
         yield return new WaitForSeconds(disDelay);
         addingDis = false;
+
     }
 }
