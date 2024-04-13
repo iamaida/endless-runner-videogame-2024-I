@@ -7,11 +7,13 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     public float moveSpeed = 5;
     public float leftRightSpeed = 4;
+
     static public bool canMove = false;
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.World);
+
         if (canMove)
         {
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
@@ -28,6 +30,7 @@ public class PlayerMove : MonoBehaviour
                     transform.Translate(Vector3.left * Time.deltaTime * leftRightSpeed * -1);
                 }
             }
+
         }
     }
 }
