@@ -12,6 +12,8 @@ public class ObstacleCollision : MonoBehaviour
     public AudioSource runningFX;
 
     public GameObject mainCam;
+
+    public GameObject levelControl;
     private void OnTriggerEnter(Collider other)
     {
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
@@ -21,6 +23,7 @@ public class ObstacleCollision : MonoBehaviour
         runningFX.Stop();
         LevelDistance.canAdding = false;
         mainCam.GetComponent<Animator>().enabled = true;
+        levelControl.GetComponent<EndRunSequence>().enabled = true;
 
 
     }
