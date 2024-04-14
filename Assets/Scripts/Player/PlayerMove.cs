@@ -10,6 +10,9 @@ public class PlayerMove : MonoBehaviour
 
     static public bool canMove = false;
     // Update is called once per frame
+    public bool isJumping = false;
+    public bool comingDown = false;
+    public GameObject playerObject;
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.World);
@@ -30,7 +33,38 @@ public class PlayerMove : MonoBehaviour
                     transform.Translate(Vector3.left * Time.deltaTime * leftRightSpeed * -1);
                 }
             }
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
+            {
+                if (!isJumping)
+                {
+                    isJumping = true;
+                    playerObject.GetComponent<Animator>().Play("Running Jump");
+                    StartCoroutine(JumSequence());
+                }
+            }
 
         }
+
+        if (isJumping)
+        {
+            if (!comingDown)
+            {
+                transform.Translate(Vector3.up * Time.deltaTime * 3, Space.World);
+            }
+            if (comingDown)
+            {
+                transform.Translate(Vector3.up * Time.deltaTime * -3, Space.World);
+            }
+        }
+    }
+
+    IEnumerator JumSequence()
+    {
+        yield return new WaitForSeconds(0.45f);
+        comingDown = true;
+        yield return new WaitForSeconds(0.45f);
+        isJumping = false;
+        comingDown = false;
+        playerObject.GetComponent<Animator>().Play("Running");
     }
 }
