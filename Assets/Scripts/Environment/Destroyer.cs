@@ -10,23 +10,17 @@ public class Destroyer : MonoBehaviour
     void Start()
     {
         parentName = transform.name;
-        StartCoroutine(DestroyClone());
+        // StartCoroutine(DestroyClone());
 
     }
-    IEnumerator DestroyClone()
-    {
-        yield return new WaitForSeconds(10);
-        if (parentName == "Section01(Clone)")
-        {
-            Destroy(gameObject);
-        }
-        if (parentName == "Section02(Clone)")
-        {
-            Destroy(gameObject);
-        }
-        if (parentName == "Section03(Clone)")
-        {
-            Destroy(gameObject);
-        }
-    }
+
+    // IEnumerator DestroyClone()
+    //{
+    //  yield return new WaitForSeconds(170);
+    // if (parentName == "Section(Clone)")
+    //{
+    //    Destroy(gameObject);
+    //}
+
+    //}
 }

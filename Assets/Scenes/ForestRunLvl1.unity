@@ -6297,7 +6297,7 @@ GameObject:
   - component: {fileID: 877492521}
   - component: {fileID: 877492522}
   m_Layer: 0
-  m_Name: Section03
+  m_Name: Section
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6894,7 +6894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af83b7b8f92cf1b41b5c0fd3d736213a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 5
   leftRightSpeed: 4
   isJumping: 0
   comingDown: 0
@@ -8975,7 +8975,7 @@ GameObject:
   - component: {fileID: 1241097549}
   - component: {fileID: 1241097550}
   m_Layer: 0
-  m_Name: Section01
+  m_Name: Section
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11582,7 +11582,7 @@ GameObject:
   - component: {fileID: 1600125007}
   - component: {fileID: 1600125008}
   m_Layer: 0
-  m_Name: Section02
+  m_Name: Section
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
