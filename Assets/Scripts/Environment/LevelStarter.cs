@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class LevelStarter : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class LevelStarter : MonoBehaviour
     public GameObject countDownGo;
     public AudioSource readyFX;
     public AudioSource goFX;
+    public GameObject userNameDisplay;
 
     public GameObject fadeIn;
     // Start is called before the first frame update
@@ -17,6 +20,7 @@ public class LevelStarter : MonoBehaviour
     {
         LevelDistance.canAdding = true;
         CollactableControl.sapphireCount = 0;
+        userNameDisplay.GetComponent<Text>().text = Register.username;
         StartCoroutine(CountSequence());
     }
 

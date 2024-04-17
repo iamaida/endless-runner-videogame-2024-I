@@ -15,7 +15,7 @@ public class Register : MonoBehaviour
     public InputField passwordInput;
     public Button signUpButton;
     public Button logInButton;
-
+    public static string username;
     ArrayList credentials;
 
     // Start is called before the first frame update
@@ -58,6 +58,7 @@ public class Register : MonoBehaviour
         if (isExists)
         {
             Debug.Log($"Logging in '{usernameInput.text}'");
+            username = usernameInput.text;
             loadMainMenuScene();
         }
         else
