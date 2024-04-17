@@ -15,6 +15,8 @@ public class LevelStarter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        LevelDistance.canAdding = true;
+        CollactableControl.sapphireCount = 0;
         StartCoroutine(CountSequence());
     }
 
