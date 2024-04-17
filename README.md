@@ -14,10 +14,10 @@ Forestry is an endless runner 3D video game set in a mountainous forest natural 
 
 ## Characters
 
-| Image                              | Description          |
-| ---------------------------------- | -------------------- |
-| ![Image 1](https://ibb.co/qyGJRVh) | Jolleen ¡The heroin! |
-| ![Image 2](https://ibb.co/QKX4ws9) | Brute ¡The enemy!    |
+| Image                                                            | Description       |
+| ---------------------------------------------------------------- | ----------------- |
+| ![Image 1](https://i.ibb.co/LZv374S/jollen-removebg-preview.png) | Jolleen ¡Heroine! |
+| ![Image 2](https://i.ibb.co/HFvhr3R/brutte-removebg-preview.png) | Brute ¡Enemy!     |
 
 ## Contributors
 
