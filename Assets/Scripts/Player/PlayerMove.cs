@@ -5,16 +5,45 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    //[SerializeField] LayerMask groundLayers;
     public float moveSpeed = 5;
     public float leftRightSpeed = 4;
+    private Vector3 velocity;
 
     static public bool canMove = false;
     // Update is called once per frame
     public bool isJumping = false;
     public bool comingDown = false;
     public GameObject playerObject;
+
+    public AudioSource runningFX;
+    public AudioSource jumpFX;
+
+    private float gravity = -9.81f;
+    private CharacterController characterController;
+
+    static public bool isGrounded = false;
+
+    public LayerMask groundMask;
+    void Start()
+    {
+        characterController = GetComponent<CharacterController>();
+    }
     void Update()
     {
+        //isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        //Debug.Log(isGrounded);
+        if (isGrounded)
+        {
+            velocity.y = 0;
+        }
+        else
+        {
+            velocity.y += gravity * Time.deltaTime;
+        }
+
+        characterController.Move(velocity * Time.deltaTime);
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.World);
 
         if (canMove)
@@ -39,6 +68,9 @@ public class PlayerMove : MonoBehaviour
                 {
                     isJumping = true;
                     playerObject.GetComponent<Animator>().Play("Running Jump");
+                    runningFX.Stop();
+                    jumpFX.Play();
+                    runningFX.Play();
                     StartCoroutine(JumSequence());
                 }
             }
@@ -50,10 +82,15 @@ public class PlayerMove : MonoBehaviour
             if (!comingDown)
             {
                 transform.Translate(Vector3.up * Time.deltaTime * 3, Space.World);
+                transform.Translate(Vector3.forward * Time.deltaTime * 1);
+                PlayerMove.isGrounded = false;
+
             }
             if (comingDown)
             {
-                transform.Translate(Vector3.up * Time.deltaTime * -3, Space.World);
+
+
+                //transform.Translate(Vector3.up * Time.deltaTime * -5, Space.World);
             }
         }
     }
