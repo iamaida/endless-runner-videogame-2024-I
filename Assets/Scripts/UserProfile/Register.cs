@@ -1,5 +1,7 @@
+#if UNITY_EDITOR
 //created by gregtchen: https://github.com/gregtchen/Unity-User-System/blob/master/Register.cs
 //modified by Aida Mina at 17-04-2024
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -69,7 +71,7 @@ public class Register : MonoBehaviour
 
     void loadMainMenuScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
 
@@ -101,3 +103,4 @@ public class Register : MonoBehaviour
 
 
 }
+#endif

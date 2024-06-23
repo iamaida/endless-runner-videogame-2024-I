@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,3 +13,4 @@ public class RotateObject : MonoBehaviour
         transform.Rotate(0, rotateSpeed, 0, Space.World);
     }
 }
+#endif
