@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MainCameraBlends
   m_EditorClassIdentifier: 
   m_CustomBlends:
-  - m_From: VirtualCameraLateral
-    m_To: VirtualCameraTrasera
+  - m_From: VirtualCameraTrasera
+    m_To: VirtualCameraLateral
     m_Blend:
       m_Style: 1
       m_Time: 2

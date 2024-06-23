@@ -1,11 +1,14 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 
+
 public class LevelStarter : MonoBehaviour
 {
+
     public GameObject countDown3;
     public GameObject countDown2;
     public GameObject countDown1;
@@ -16,8 +19,11 @@ public class LevelStarter : MonoBehaviour
 
     public GameObject fadeIn;
     // Start is called before the first frame update
+
     void Start()
     {
+
+
         LevelDistance.canAdding = true;
         CollactableControl.sapphireCount = 0;
         userNameDisplay.GetComponent<Text>().text = Register.username;
@@ -43,3 +49,4 @@ public class LevelStarter : MonoBehaviour
 
 
 }
+#endif

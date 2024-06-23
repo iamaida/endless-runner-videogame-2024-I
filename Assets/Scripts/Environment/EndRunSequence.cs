@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,3 +29,4 @@ public class EndRunSequence : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 }
+#endif
