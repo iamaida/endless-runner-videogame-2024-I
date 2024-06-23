@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
@@ -11,11 +12,11 @@ public class CameraZoneSwitcher : MonoBehaviour
     public CinemachineVirtualCamera primaryCamera;
     // Start is called before the first frame update
     public CinemachineVirtualCamera[] virtualCameras;
-    //private void Start()
-    //{
-    //  SwitchToCamera(primaryCamera);
+    private void Start()
+    {
+        primaryCamera.enabled = true;
 
-    //}
+    }
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Entrada: " + triggerTag);
@@ -56,3 +57,4 @@ public class CameraZoneSwitcher : MonoBehaviour
         //}
     }
 }
+#endif
